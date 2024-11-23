@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Santhosh George Kulangara</title>
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXA58rX3_kqt5g5Yo4jxAxe9_Juuv6pe0ygw&s" type="image/icon type">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-                        
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
 </head>
 <body >
     <header class="bg-info" style="position: fixed; width: 100%; z-index: 1;">
@@ -81,8 +83,9 @@
         </div>
       </section>
 <br>
-      <section class="p-5" style="background-color: rgb(223, 245, 238);" id="servicSections">
+      <section class="p-5" style="background-color: rgb(223, 245, 238);" id="servicSections" >
         <div class="container">
+          <br>
           <div>                     
             <h2 class="text-center"> <b>Services </b></h2>
             </div>
@@ -130,6 +133,7 @@
 
       <section style="background-color: rgb(223, 245, 238);" id="Awards and honours">
         <div class="container">
+          <br><br><br>
           <div class="row">
             <div class="col-12">
               <h2 class="text-center" style="color: rgb(9, 21, 82);"> <b><u>Awards and honours </u></b></h2>
@@ -145,6 +149,7 @@
       </section>
       <section style="background-color: rgb(223, 245, 238);" id="Safari">
         <div class="container">
+          <br><br><br>
           <h2 class="text-center"> <b>Safari</b></h2>
           <br>
           <div class="row"  ;>
@@ -199,11 +204,12 @@
 
       <section id="contact" style="background-color: rgb(223, 245, 238);">
         <div class="container">
+          <br><br>
           <br>
           <h1 style="text-align: center;"><b> contact me </b></h1>
           <div class="row">
             <div class="col-md-12">
-              <form>
+              <form id="submit-form"  action="">
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="inputEmail4">Name</label>
@@ -251,7 +257,7 @@
       <br><br>
      
         <div class="row" >
-          <div class="col-md-12 text-center text-white" style="background-color: rgb(53, 86, 148);  padding-top: .5em; width: 100%;"> 
+          <div class="col-md-12 text-center text-white" style="background-color: rgb(32, 58, 107);  padding-top: .5em; width: 100%;"> 
            
             <a href="https://www.instagram.com/santhoshgeorgekulangara_/?hl=en"><i class="bi bi-instagram" style="margin: .5em;"></i></a>
             <a href="https://www.facebook.com/sgkfanspage/"><i class="bi bi-facebook" style="margin: .5em;"></i></a>
@@ -263,10 +269,30 @@
       
      </footer>
 
+     <script>  //ajax code note working, somthing went wrong is here......
+      $("#submit-form").submit((e)=>{
+          e.preventDefault()
+          $.ajax({
+              url:"https://script.google.com/macros/s/AKfycbyB6KTZLqF7rOW0hoY1fTvDQdh9Xgdj_3DzBqgesOMD5i-MngEF3UGjz4sV_g0kOVmz0w/exec",
+              data:$("#submit-form").serialize(),
+              method:"post",
+              success:function (response){
+                  alert("Form submitted successfully")
+                  window.location.reload()
+                  //window.location.href="https://google.com"
+              },
+              error:function (err){
+                  alert("Something Error")
 
+              }
+          })
+      })
+    </script>
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
+   
 </body>
 </html>
